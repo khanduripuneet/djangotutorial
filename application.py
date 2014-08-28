@@ -11,16 +11,7 @@ def abc ():
 
 @app.route('/user/<username>/telephone/<phone>')
 def show_user_profile(username,phone):
-	return '<!Doctype html>\
-	<html>\
-	<head>\
-     <title>INFORMATION</title>\
-     </head>\
-     <body>\
-     <h3>INFORMATION</h3>\
-     <p>the user is %s phone is %s</p>\
-     </body>\
-     </html> '  % (username,phone)
+	   return render_template('info.html', name = username, number = phone)
 
 @app.route('/square/<float:x>')
 def square (x):
