@@ -1,0 +1,28 @@
+<!Doctype html>
+<html ng-app>
+<head>
+	<title>Adding two numbers</title>
+	<script src="static/angular.min.js"></script>
+</head>
+<body>
+	{% raw %}
+	    <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+	{% endraw %}
+	<P>Enter the number
+		<form method="POST" action="{{ url_for('table') }}">
+			<input type="text" name="t1" value="{{ number }}"/> <input type="submit" />
+            <ul>
+            	{% for row in rows %}
+			<li>
+			 {{ row[0] }} * {{ row[1] }} = {{ row[2] }}
+			</li>
+			    {%endfor%}
+		</ul>
+    	</form>
+	</p>
+
+</body>
+</html>

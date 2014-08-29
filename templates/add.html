@@ -1,0 +1,13 @@
+<!Doctype html>
+<head>
+	<title>Adding two numbers</title>
+</head>
+<body>
+	<P>Enter two numbers of your choice to get sum</p>
+		<form method="POST" action="{{ url_for('add') }}">
+			<Input type="text" name="x1" value="{{ firstnumber }}"/> + <Input type="text" name= "y1" value="{{ secondnumber }}" />
+			 + <Input type="text" name= "p1" value="{{ thirdnumber }}" /> = {{ result }}
+			<Input type="submit" />
+		</form>
+
+</body>
